@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand img {
+    width: 64px;
+}
+
+img[src*='plugin'] {
+    width: 32px;
+}
+
+.navbar a:hover>img[src*='plugin'],
+img[src*='plugin']:hover {
+    animation: tada;
+    animation-duration: 1s;
+}
+
+ul {
+    text-align: center;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - */
+/* 大區塊 */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgba(95, 158, 160, 0.2);
+}
+
+/* 表格區 */
+.time {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    margin: 50px;
+}
+
+.time th,
+.time td {
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 聯繫區 */
+.contact {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+img[src*='1600'] {
+    width: 64px;
+}
+
+img[src*='76726123'] {
+    width: 200px;
+}
+
+/* 地圖區 */
+iframe {
+    border-radius: 5px;
+    margin: 50px;
+}
+
+/* media */
+@media (max-width : 1200px) {
+
+    .time,
+    .contact {
+        width: 50%;
+    }
+
+}
+
+@media (max-width : 500px) {
+
+    .time,
+    .contact {
+        width: 100%;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - */
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('./img/cloud.jpg.avif') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.w {
+    letter-spacing: 2px;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* transform: scale(0); */
+    transition: transform .5s ease, height .2s ease;
+}
+
+.w.active-popup {
+    transform: scale(1);
+
+}
+
+.w.active {
+    height: 520px;
+}
+
+.w .login,
+.w .register {
+    width: 100%;
+    padding: 40px;
+}
+
+.w .login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.w.active .login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.w .register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.w.active .register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.login h2,
+.register h2 {
+    font-size: 2em;
+    font-weight: 100;
+    color: steelblue;
+    text-align: center;
+}
+
+.input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid steelblue;
+    margin: 30px 0;
+}
+
+.input label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: steelblue;
+    font-weight: 100;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input input:focus~label,
+.input input:valid~label {
+    top: -5px;
+}
+
+.input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: steelblue;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: steelblue;
+    line-height: 57px;
+}
+
+.remember {
+    font-size: .9em;
+    color: steelblue;
+    font-weight: 100;
+    margin: 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember label input {
+    accent-color: steelblue;
+    margin-right: 3px;
+}
+
+.remember a {
+    color: steelblue;
+    text-decoration: none;
+}
+
+.remember a:hover {
+    text-decoration: underline;
+}
+
+.login .btn,
+.register .btn {
+    width: 100%;
+    height: 45px;
+    background: palevioletred;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: url('./img/icons8-cursor-32-6.ico');
+    font-size: 1em;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.login .btn:hover,
+.register .btn:hover {
+    background-color: pink;
+}
+
+.login-register {
+    font-size: .9em;
+    color: steelblue;
+    text-align: center;
+    font-weight: 100;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: steelblue;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+.btn p {
+    margin-top: 5px;
+    font-weight: 400;
+    color: white;
+}
+
+.btn p:hover {
+    color: white;
+}

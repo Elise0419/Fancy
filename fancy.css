@@ -1,0 +1,102 @@
+* {
+    cursor: url('./img/icons8-magic-wand-32.ico'), auto;
+    font-weight: 200;
+}
+
+body {
+    /* background: url('./img/277107150_4963813220376021_766964136527613293_n.png')  no-repeat; */
+    min-height: 100vh;
+    background-size: contain;
+    background-position: center;
+}
+
+.navbar-brand img {
+    width: 64px;
+}
+
+img[src*='plugin'] {
+    width: 32px;
+}
+
+.navbar a:hover>img[src*='plugin'],
+img[src*='plugin']:hover {
+    animation: tada;
+    animation-duration: 1s;
+}
+
+ul {
+    text-align: center;
+}
+/* - - - - - - - - - - - - - - - - - - - - */
+/* 大區塊 */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgba(95, 158, 160, 0.2);
+}
+
+/* 表格區 */
+.time {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    margin: 50px;
+}
+
+.time th,
+.time td {
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 聯繫區 */
+.contact {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+img[src*='fb'],
+img[src*='ig'],
+img[src*='line.png'] {
+    width: 64px;
+}
+
+img[src*='line.jpg'] {
+    width: 200px;
+}
+
+/* 地圖區 */
+iframe {
+    border-radius: 5px;
+    margin: 50px;
+}
+
+/* media */
+@media (max-width : 1200px) {
+
+    .time,
+    .contact {
+        width: 50%;
+    }
+
+}
+
+@media (max-width : 500px) {
+
+    .time,
+    .contact {
+        width: 100%;
+    }
+}

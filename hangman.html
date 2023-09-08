@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .hang {
+            display: flex;
+            min-height: 100vh;
+            position: absolute;
+        }
+
+        .right {
+            background-color: lightblue;
+            min-height: 100vh;
+            position: relative;
+            left: 720px;
+            width: 720px;
+            text-align: center;
+        }
+
+        .key {
+            background-color: lightgray;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .key button {
+            font-size: xx-large;
+            padding: 10px 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 10px;
+            color: slategray;
+        }
+
+        .right .board {
+            position: relative;
+            top: 30px;
+            background-color: aliceblue;
+            width: 90%;
+            height: 300px;
+            border-radius: 10px;
+            margin: auto;
+            letter-spacing: 5px;
+        }
+
+        .b1, .b2 {
+            padding: 5px 10px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px gray solid;
+            color: gray;
+        }
+        .b1 {
+            position: absolute;
+            right: 50px;
+            top: 290px; 
+        }
+        .b2 {
+            position: absolute;
+            top: 250px;
+            right: 50px;
+        }
+        .board p:first-child {
+            position: relative;
+            top:110px; left: 10px;
+            letter-spacing: 35px;
+            font-size: 50px;
+        }
+
+        .board p:last-child {
+            position: relative;
+            top:50px;font-size:
+            65px;
+        }
+        .go>img {
+            position: absolute;
+            bottom: -140px;
+            width: 1000px;
+            z-index: 100;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <p class="go"><img src="./img/go.png" style="animation: bounceInLeft .5s;"></p>
+        <div class="hang">
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line6.png" width="64" style="position: relative; top: 347px; left: 394px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line7.png" width="64" style="position: relative; top: 347px; left: 376px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line2.png" width="64" style="position: relative; top: 300px; left: 289px; z-index: 99;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line4.png" width="64" style="position: relative; top: 295px; left: 201px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line5.png" width="64" style="position: relative; top: 295px; left: 185px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/circle.png" width="64" style="position: relative; top: 245px; left: 96px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line1.png" width="64" style="position: relative; top: 180px; left: 32px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line8.png" width="64" style="position: relative; top: 150px; right: 57px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line8.png" width="64" style="position: relative; top: 150px; right: 177px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line8.png" width="64" style="position: relative; top: 150px; right: 296px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line3.png" width="64" style="position: relative; top: 180px; right: 385px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line3.png" width="64" style="position: relative; top: 235px; right: 449px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line3.png" width="64" style="position: relative; top: 290px; right: 513px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line3.png" width="64" style="position: relative; top: 345px; right: 577px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/line3.png" width="64" style="position: relative; top: 400px; right: 641px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/rectangle.png" width="64" style="position: relative; top: 445px; right: 733px;">
+            </div>
+            <div style="width: fit-content; height: fit-content;">
+                <img src="./img/rectangle.png" width="64" style="position: relative; top: 445px; right: 742px;">
+            </div>
+            <div style="position: absolute;top: 10px; left: 10px;">
+                <img src="./img/hangman.png" style="vertical-align: bottom;" width="54"><span
+                    style="font-size: xx-large; color: rosybrown;"> Hangman</span>
+            </div>
+        </div>
+        <div class="right">
+            <div class="board">
+                <p style="visibility: hidden;">hello</p>
+                <p>_ _ _ _ _</p>
+            </div>
+            <div class="key">
+                <button type="button" onclick="a()">a</button>
+                <button type="button" onclick="b()">b</button>
+                <button type="button" onclick="c()">c</button>
+                <button type="button" onclick="d()">d</button>
+                <button type="button" onclick="e()">e</button>
+                <button type="button" onclick="f()">f</button>
+                <button type="button" onclick="g()">g</button>
+                <button type="button" onclick="h()">h</button>
+                <button type="button" onclick="i()">i</button>
+                <button type="button" onclick="j()">j</button>
+                <button type="button" onclick="k()">k</button>
+                <button type="button" onclick="l()">l</button>
+                <button type="button" onclick="m()">m</button>
+                <button type="button" onclick="n()">n</button>
+                <button type="button" onclick="o()">o</button>
+                <button type="button" onclick="p()">p</button>
+                <button type="button" onclick="q()">q</button>
+                <button type="button" onclick="r()">r</button>
+                <button type="button" onclick="s()">s</button>
+                <button type="button" onclick="t()">t</button>
+                <button type="button" onclick="u()">u</button>
+                <button type="button" onclick="v()">v</button>
+                <button type="button" onclick="w()">w</button>
+                <button type="button" onclick="x()">x</button>
+                <button type="button" onclick="y()">y</button>
+                <button type="button" onclick="z()">z</button>
+            </div>
+            <button type="button" class="b2" onclick="start()">Start</button>
+            <button type="button" class="b1" onclick="Show()">Show answer</button>
+        </div>
+    </section>
+
+    <script>
+        var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+        var i = 0;
+
+        // for (i; i < letters.length; i++) {
+        //     console.log(letters[i])
+        // }
+
+        var ran = Math.floor(Math.random()*10)
+
+        var vocabulary = ['Lego','Competition','Robot','Team','Science','Technology','Engineering','Art','Mathematics','Fancy']
+        // var hints = ['Lego','Competition','Robot','Team','Science','Technology','Engineering','Art','Mathematics','Fancy']
+
+        function start() {
+            var ran = Math.floor(Math.random()*10)
+            document.querySelector('.board>p:first-child').innerHTML = vocabulary[ran];
+
+            var dash;
+            console.log(ran)
+            
+            switch(ran) {
+                case 0:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _'
+                    break;
+                case 1:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _ _ _ _ _ _ _ _'
+                    break;
+                case 2:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _ _'
+                    break;
+                case 3:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _'
+                    break;
+                case 4:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _ _ _ _'
+                    break;
+                case 5:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _ _ _ _ _ _ _'
+                    break;
+                case 6:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _ _ _ _ _ _ _ _'
+                    break;
+                case 7:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _'
+                    break;
+                case 8:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _ _ _ _ _ _ _ _'
+                    break;
+                case 9:
+                    document.querySelector('.board>p:last-child').innerHTML='_ _ _ _ _'
+                    break;
+            }
+        }
+
+        function Show() {
+            var show = document.querySelector('.board>p:first-child')
+            // console.log(show.includes('hidden'))
+            document.querySelector('.board>p:first-child').style = "visibility: visible;";
+
+            // if (show.indexOf('hidden')) {
+            //     document.querySelector('.board>p:first-child').style = "visibility: visible;";
+            // }
+            // else {
+            //     document.querySelector('.board>p:first-child').style = "visibility: hidden;";
+            // }
+        }
+
+        setTimeout(big, 1800)
+        function big() {
+            go = document.querySelector('.go')
+            go.innerHTML = ""
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>汎奇創意開發 Fancy Design Limited</title>
+
+  <!-- <link rel="stylesheet" href="./fancy.css"> -->
+  <link rel="icon" href="./img/295185366_421897549955099_7519434604551259574_n.jpg">
+  <link rel="stylesheet" href="../_css/bootstrap.css">
+  <script src="../_js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(215, 202, 228, 0.3);
+    }
+
+    body>div {
+      width: 650px;
+      background-color: transparent;
+      line-height: 40px;
+    }
+
+    img {
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .q {
+      background-color: white;
+      border: 1px solid lightgray;
+      margin-top: 15px;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .q input {
+      border: none;
+      border-bottom:  1px solid lightgray;;
+    }
+
+    .title {
+      background-color: rgb(101, 77, 133);
+      position: relative;
+      color: white;
+      width: 649px;
+      left: -20px;
+      top:-20px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 5px;
+      padding-left: 20px;
+    }
+
+    .btn {
+      font-size: 14px;
+      background-color: white;
+      margin-top: 15px;
+      margin-bottom: 100px;
+      padding: 7px 23px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .clear {
+      float: right;
+      background-color: transparent;
+      border: 0;
+      color: rgb(101, 77, 133);
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .btn.go {
+      margin-left: 10px;
+      background-color: rgb(101, 77, 133);
+      color: white;
+    }
+
+    .btn.back {
+      background-color: white;
+      color: rgb(101, 77, 133);;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    
+    <img src="./img/My project.png" style="margin-top: 15px;">
+    <div class="q"  style="border-top: rgb(93, 69, 137) solid 10px;">
+      <div>
+        <h3>報名資料填寫</h3>
+      </div>
+      <hr>
+      <div>
+        <p>
+          VEX教育型機器人系列賽事參與年齡跨及小學至大學，並在全世界60多個國家有超過24000支賽隊持續參與，針對每個賽季所推出的工程設計主題，學生需建構一部屬於自己的機器人，並在賽事中與其他賽隊進行合作與競賽，其涵蓋的教育內容不僅考驗學生STEM在科學、科技、工程與數學領域的實力，更造就其團隊合作、領導力、溝通能力以及解決問題的能力，是一項提供予STEM能力培養者的完善實踐平台。
+        </p>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="title">
+        基本資料
+      </div>
+      <div>
+        <p>家長姓名（緊急聯絡人）</p>
+      </div>
+      <div>
+        <input type="text" autofocus required placeholder="您的回答">
+      </div>
+    </div>
+
+    <div class="q">
+      <div>
+        <p>家長電話（緊急聯絡人）</p>
+      </div>
+      <div>
+        <input type="tel" required placeholder="您的回答">
+      </div>
+    </div>
+
+    <div class="q">
+      <div>
+        <p>E-Mail</p>
+      </div>
+      <div>
+        <input type="email" required placeholder="您的回答">
+      </div>
+    </div>
+    <div class="q">
+      <div>
+        <p>孩子姓名</p>
+      </div>
+      <div>
+        <input type="text" required>
+      </div>
+    </div>
+    <div class="q">
+      <div>
+        <p>孩子出生年月日</p>
+      </div>
+      <div>
+        <input type="date" required placeholder="您的回答">
+      </div>
+    </div>
+    <div class="q">
+      <div>
+        <p>有任何問題，歡迎留言告訴我們</p>
+      </div>
+      <div>
+        <input type="text" required placeholder="您的回答">
+      </div>
+    </div>
+    
+    <button class="btn back"><a href="./contest.html" style="color: rgb(101, 77, 133); text-decoration: none;">返回</a></button>
+    <button class="btn go"><a href="./contest.html" style="color: white; text-decoration: none;" onclick="s()">提交</a></button>
+    <button class="clear">清除表單</button>
+  </div>
+
+  <script>
+    function s() {
+      alert('報名成功！')
+    }
+  </script>
+</body>
+
+</html>
